@@ -1,0 +1,48 @@
+#include<graphics.h>
+#include<dos.h>
+void main()
+{
+	int gd=0,gm,j,i;
+	clrscr();
+	initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+	for(j=0;j<500;j++)
+	{
+		cleardevice();
+		setcolor(7);
+		rectangle(40+j,400,170+j,420);
+		rectangle(20+j,420,190+j,440);
+		rectangle(0+j,440,210+j,460);
+		rectangle(100+j,10,110+j,400);
+		rectangle(110+j,10,310+j,50);
+		rectangle(110+j,50,310+j,90);
+		rectangle(110+j,90,310+j,130);
+		setfillstyle(1,4);
+		floodfill(41+j,401,7);
+		floodfill(111+j,11,7);
+		setfillstyle(1,7);
+		floodfill(21+j,421,7);
+		floodfill(111+j,51,7);
+		floodfill(111+j,81,7);
+		setfillstyle(1,2);
+		floodfill(1+j,441,7);
+		floodfill(111+j,91,7);
+		setfillstyle(1,5);
+		floodfill(101+j,11,7);
+		setcolor(1);
+		circle(210+j,70,20);
+		line(210+j,50,210+j,90);
+		line(190+j,70,230+j,70);
+		line(197+j,56,224+j,84);
+		line(197+j,84,224+j,56);
+		line(203+j,52,218+j,88);
+		line(203+j,88,218+j,52);
+		line(193+j,63,228+j,78);
+		line(192+j,78,228+j,63);
+		for(i=10;i>=0;i--)
+		{
+			circle(105+j,430,i);
+		}
+		delay(50);
+	}
+	getch();
+}

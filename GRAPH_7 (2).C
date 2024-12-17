@@ -1,0 +1,64 @@
+#include<graphics.h>
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+void main()
+{
+	int gd=0,gm,i,j;
+	clrscr();
+	initgraph(&gd,&gm,"");/*
+	for(i=12;i>=0;i--)
+	{
+	delay(100);
+		setfillstyle(i,i);
+		fillellipse(320,240,5+i*20,5+i*20);
+	}                       */
+	for(i=1;i<10;i++)
+	{
+circle(320,240,100);
+	setfillstyle(1,1);
+	floodfill(300+i*i,200+i*i,WHITE);
+circle(405,190,100);
+	setfillstyle(2,2);
+	floodfill(400+i*i,150+i*i,WHITE);
+circle(407,290,100);
+	setfillstyle(3,3);
+	floodfill(400+i*i,250+i*i,WHITE);
+circle(320,340,100);
+	setfillstyle(4,4);
+	floodfill(300+i*i,300+i*i,WHITE);
+circle(320,140,100);
+	setfillstyle(5,5);
+	floodfill(300+i*i,100+i*i,WHITE);
+circle(233,290,100);
+	setfillstyle(6,6);
+	floodfill(200+i*i,250+i*i,WHITE);
+circle(233,191,100);
+	setfillstyle(7,7);
+	floodfill(200+i*i,150+i*i,WHITE);
+	}
+	getch();
+}
+/*	setfillstyle(1,1);
+	floodfill(310,230,WHITE);
+	setfillstyle(2,2);
+	floodfill(400,180,WHITE);
+	setfillstyle(3,3);
+	floodfill(400,280,WHITE);
+	setfillstyle(4,4);
+	floodfill(310,330,WHITE);
+	setfillstyle(5,5);
+	floodfill(310,130,WHITE);
+	setfillstyle(6,6);
+	floodfill(230,285,WHITE);
+	setfillstyle(7,7);
+	floodfill(230,185,WHITE);
+	setfillstyle(8,8);
+	floodfill(,WHITE);
+	setfillstyle(9,9);
+	floodfill(,WHITE);
+	setfillstyle(10,10);
+	floodfill(,WHITE);
+	setfillstyle(11,11);
+	floodfill(,WHITE);
+*/

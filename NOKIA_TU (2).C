@@ -1,0 +1,41 @@
+#include<graphics.h>
+#include<dos.h>
+void main()
+{
+	int gd=0,gm,i,j,k,l;
+	initgraph(&gd,&gm,"");
+	for(i=0;i<5;i++)
+	{
+		sound(1319);
+		delay(143);
+		sound(1175);
+		delay(143);
+		sound(740);
+		delay(277);
+		sound(831);
+		delay(277);
+		sound(1109);
+		delay(143);
+		sound(988);
+		delay(143);
+		sound(587);
+		delay(277);
+		sound(659);
+		delay(277);
+		sound(988);
+		delay(143);
+		sound(880);
+		delay(143);
+		sound(554);
+		delay(277);
+		sound(659);
+		delay(277);
+		sound(880);
+		delay(543);
+		nosound();
+		printf("\n\t\t\t%d",i+1);
+		sound(1);
+		delay(1000);
+	}
+	getch();
+}

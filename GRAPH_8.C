@@ -1,0 +1,44 @@
+#include<graphics.h>
+#include<dos.h>
+void main()
+{
+	int gd=0,gm,i,j;
+	int triangle[8]={100,50,190,200,10,200,100,50};
+	clrscr();
+	initgraph(&gd,&gm,"");
+	setfillstyle(9,9);
+	fillpoly(4,&triangle);
+	rectangle(10,200,630,380);
+	floodfill(51,151,WHITE);
+	circle(100,90,15);
+	setfillstyle(7,7);
+	floodfill(100,90,WHITE);
+	line(100,50,540,50);
+	line(190,200,630,200);
+	for(i=0;i<12;i++)
+	{
+		line(100+i*40,50,190+i*40,200);
+		setfillstyle(i,i);
+		floodfill(105+(i*40),51,WHITE);
+	}
+	line(190,200,190,380);
+//door
+	rectangle(60,240,140,380);
+/*devider*/line(100,240,100,380);
+	setfillstyle(5,2);
+	floodfill(61,241,WHITE);
+	setfillstyle(5,2);
+	floodfill(101,241,WHITE);
+/*kunti*/line(90,310,110,310);
+//khidki
+	rectangle(340,240,480,340);
+	setfillstyle(8,15);
+	floodfill(341,241,WHITE);
+	setfillstyle(6,5);
+	floodfill(50,220,WHITE);
+	setfillstyle(1,15);
+	floodfill(0,0,WHITE);
+	setfillstyle(2,6);
+	floodfill(300,210,WHITE);
+	getch();
+}

@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i,j;
+	clrscr();
+	for(i=0;i<9;i++)
+	{
+		if(i==0 ^ i==4 ^ i==8 )
+		{
+			printf("  BBBBBB   ");
+		}
+		else
+		{
+			printf("  B     B  ");
+		}
+		printf("\n") ;
+	}
+	getch();
+}
